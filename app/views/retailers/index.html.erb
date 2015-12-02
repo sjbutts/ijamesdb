@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Retailers</h1>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip code</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Contact name</th>
+      <th>Terms</th>
+      <th>Albums ordered</th>
+      <th>Date of last order</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retailers.each do |retailer| %>
+      <tr>
+        <td><%= retailer.name %></td>
+        <td><%= retailer.address %></td>
+        <td><%= retailer.city %></td>
+        <td><%= retailer.state %></td>
+        <td><%= retailer.zip_code %></td>
+        <td><%= retailer.phone_number %></td>
+        <td><%= retailer.email %></td>
+        <td><%= retailer.website %></td>
+        <td><%= retailer.contact_name %></td>
+        <td><%= retailer.terms %></td>
+        <td><%= retailer.albums_ordered %></td>
+        <td><%= retailer.date_of_last_order %></td>
+        <td><%= retailer.notes %></td>
+        <td><%= link_to 'Show', retailer %></td>
+        <td><%= link_to 'Edit', edit_retailer_path(retailer) %></td>
+        <td><%= link_to 'Destroy', retailer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retailer', new_retailer_path %>

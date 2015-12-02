@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @retailer.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @retailer.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @retailer.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @retailer.state %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @retailer.zip_code %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @retailer.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @retailer.email %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @retailer.website %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @retailer.contact_name %>
+</p>
+
+<p>
+  <strong>Terms:</strong>
+  <%= @retailer.terms %>
+</p>
+
+<p>
+  <strong>Albums ordered:</strong>
+  <%= @retailer.albums_ordered %>
+</p>
+
+<p>
+  <strong>Date of last order:</strong>
+  <%= @retailer.date_of_last_order %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @retailer.notes %>
+</p>
+
+<%= link_to 'Edit', edit_retailer_path(@retailer) %> |
+<%= link_to 'Back', retailers_path %>

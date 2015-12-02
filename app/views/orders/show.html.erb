@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>Retailer:</strong>
+  <%= @order.retailer %>
+</p>
+
+<p>
+  <strong>Customer number:</strong>
+  <%= @order.customer_number %>
+</p>
+
+<p>
+  <strong>Purchase order:</strong>
+  <%= @order.purchase_order %>
+</p>
+
+<p>
+  <strong>Invitation name:</strong>
+  <%= @order.invitation_name %>
+</p>
+
+<p>
+  <strong>Printing style:</strong>
+  <%= @order.printing_style %>
+</p>
+
+<p>
+  <strong>Paper choice:</strong>
+  <%= @order.paper_choice %>
+</p>
+<p>
+  <strong>Quantity:</strong>
+  <%= @order.quantity %>
+</p>
+
+<p>
+  <strong>Est completion:</strong>
+  <%= @order.est_completion %>
+</p>
+
+</p>
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Review Customer Orders', orders_path %>

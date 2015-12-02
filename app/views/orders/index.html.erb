@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Orders</h1>
+
+
+
+<table class="table table-striped table-hover" >
+  <thead>
+    <tr>
+      <th>Order Date</th>
+      <th>Retailer</th>
+      <th>Customer Number</th>
+      <th>Purchase Order</th>
+      <th>Invitation Name</th>
+      <th>Printing Style</th>
+      <th>Paper Choice</th>
+       <th>Quantity</th>
+      <th>Est completion</th>
+      <th>Invoice No</th>
+       <th>Notes</th>
+      <th>Order Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.order_date %></td>
+        <td><%= order.retailer %></td>
+        <td><%= order.customer_number %></td>
+        <td><%= order.purchase_order %></td>
+        <td><%= order.invitation_name %></td>
+        <td><%= order.printing_style %></td>
+        <td><%= order.paper_choice %></td>
+        <td><%= order.quantity %></td>
+        <td><%= order.est_completion %></td>
+        <td><%= order.invoice_no %></td>
+        <td><%= order.notes %></td>
+        <td><img src='<%= order.image %>'></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>
+
+

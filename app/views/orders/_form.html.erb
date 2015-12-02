@@ -1,0 +1,57 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_date %><br>
+    <%= f.text_field :order_date %>
+  </div>
+  <div class="field">
+    <%= f.label :retailer %><br>
+    <%= f.text_field :retailer %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_number %><br>
+    <%= f.text_field :customer_number %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_order %><br>
+    <%= f.text_field :purchase_order %>
+  </div>
+  <div class="field">
+    <%= f.label :invitation_name %><br>
+    <%= f.text_field :invitation_name %>
+  </div>
+  <div class="field">
+    <%= f.label :printing_style %><br>
+    <%= f.text_field :printing_style %>
+  </div>
+  <div class="field">
+    <%= f.label :paper_choice %><br>
+    <%= f.text_field :paper_choice %>
+  </div>
+    <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :est_completion %><br>
+    <%= f.text_field :est_completion %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

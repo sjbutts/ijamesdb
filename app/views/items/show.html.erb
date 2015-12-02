@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @item.product %>
+</p>
+
+<p>
+  <strong>Album Edition:</strong>
+  <%= @item.album_edition %>
+</p>
+
+<p>
+  <strong>Page Number:</strong>
+  <%= @item.page_number %>
+</p>
+
+<p>
+  <strong>Product Image:</strong>
+  <%= image_tag @item.image_url if @item.image.present? %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Review Product List', items_path %>
